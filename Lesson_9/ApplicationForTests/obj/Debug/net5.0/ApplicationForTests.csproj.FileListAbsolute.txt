@@ -1,0 +1,16 @@
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\ApplicationForTests.exe
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\ApplicationForTests.deps.json
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\ApplicationForTests.runtimeconfig.json
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\ApplicationForTests.runtimeconfig.dev.json
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\ApplicationForTests.dll
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\ref\ApplicationForTests.dll
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\ApplicationForTests.pdb
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ApplicationForTests.csproj.AssemblyReference.cache
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ApplicationForTests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ApplicationForTests.AssemblyInfoInputs.cache
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ApplicationForTests.AssemblyInfo.cs
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ApplicationForTests.csproj.CoreCompileInputs.cache
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ApplicationForTests.dll
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ref\ApplicationForTests.dll
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ApplicationForTests.pdb
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ApplicationForTests.genruntimeconfig.cache

@@ -20,7 +20,12 @@
       "ProjectGuid": "c501ce71-cd77-4f68-b769-182bd5dd3d80",
       "DisplayName": "DirectoryManagment",
       "ColorIndex": 2
+    },
+    "ef77a64a-c368-4ccc-b23f-7c285b5da25f": {
+      "ProjectGuid": "ef77a64a-c368-4ccc-b23f-7c285b5da25f",
+      "DisplayName": "ApplicationForTests",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 3
+  "NextColorIndex": 4
 }
