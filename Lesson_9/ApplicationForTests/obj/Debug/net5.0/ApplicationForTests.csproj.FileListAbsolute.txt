@@ -14,3 +14,11 @@ C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5
 C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ref\ApplicationForTests.dll
 C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ApplicationForTests.pdb
 C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ApplicationForTests.genruntimeconfig.cache
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\Lesson_9.deps.json
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\Lesson_9.runtimeconfig.json
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\Lesson_9.runtimeconfig.dev.json
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\Lesson_9.exe
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\Lesson_9.dll
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\Lesson_9.pdb
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\bin\Debug\net5.0\Lesson_9.dll.config
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\ApplicationForTests\obj\Debug\net5.0\ApplicationForTests.csproj.CopyComplete

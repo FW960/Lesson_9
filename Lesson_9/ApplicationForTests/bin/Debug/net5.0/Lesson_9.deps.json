@@ -6,14 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "ApplicationForTests/1.0.0": {
-        "dependencies": {
-          "Lesson_9": "1.0.0"
-        },
-        "runtime": {
-          "ApplicationForTests.dll": {}
-        }
-      },
       "Lesson_9/1.0.0": {
         "runtime": {
           "Lesson_9.dll": {}
@@ -22,11 +14,6 @@
     }
   },
   "libraries": {
-    "ApplicationForTests/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Lesson_9/1.0.0": {
       "type": "project",
       "serviceable": false,

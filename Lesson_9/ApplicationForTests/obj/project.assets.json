@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "Lesson_9/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Lesson_9.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Lesson_9.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Lesson_9/1.0.0": {
+      "type": "project",
+      "path": "../Lesson_9/Lesson_9.csproj",
+      "msbuildProject": "../Lesson_9/Lesson_9.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "Lesson_9 >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\windo\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\windo\\source\\repos\\Lesson_9\\Lesson_9\\Lesson_9\\Lesson_9.csproj": {
+              "projectPath": "C:\\Users\\windo\\source\\repos\\Lesson_9\\Lesson_9\\Lesson_9\\Lesson_9.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
