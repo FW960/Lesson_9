@@ -1,5 +1,4 @@
 C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\Lesson_9.exe
-C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\Lesson_9.dll.config
 C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\Lesson_9.deps.json
 C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\Lesson_9.runtimeconfig.json
 C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\Lesson_9.runtimeconfig.dev.json
@@ -15,3 +14,4 @@ C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\Lesson_9
 C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\ref\Lesson_9.dll
 C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\Lesson_9.pdb
 C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\Lesson_9.genruntimeconfig.cache
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\Lesson_9.dll.config

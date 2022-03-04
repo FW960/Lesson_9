@@ -1,15 +1,127 @@
 
-Error cpDir command. Destination directory C:\Program Files (x8 doesnt't exist.
-Error incorrect using of cpDir command. User should type directories path next to cpDir command
-Error rmFile command. File doesn't exist.
-Error rmFile command. File doesn't exist.
-Error rmFile command. File doesn't exist.
-Error cpFile command. Can't copy directory C:\Program Files (x86)\Yandex usind cpFile command.
-Error incorrect using of cpDir command. User should type directories path next to cpDir command
-Error in entering path. User haven't entered pass correctly
-Error in entering path. User haven't entered pass correctly
-Error in entering path. User haven't entered pass correctly
-Error in entering path. User haven't entered pass correctly
-Error lsCommand. Directory C:\gdg doesn't exist
-Error in entering path. User haven't entered pass correctly
-Error in entering path. User haven't entered pass correctly
+Errors file error. File have been deleted
+Config file error. File wasn't in correct format.
+Path file error. File have been deleted
+Error ls command. Incorrect using of ls command
+Error cpDir command. Incorrect using of cpDir command
+Error cpDir command. Incorrect using of cpDir command
+Error cpDir command. Can't copy directory C:\Branch1 into onself
+Error cpDir command. Can't copy directory C:\Branch1 into onself
+Error cpDir command. Source directory C:\Branch doesnt't exist.
+Error cpDir command. Can't copy directory C:\Branch1 into onself.
+Error cpFile command. Can't copy directory C:\Branch1 usind cpFile command.
+Error cpFile command. Can't copy directory C:\Branch1 usind cpFile command.
+Error cpFile command. Can't copy file C:\Branch1.txt into oneself.
+Error cpFile command. Source file C:\Branch1.txt doesn't exits.
+Error cpFile command. Source file C:\Branch1.txt doesn't exits.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error cpFile command. Incorrect using of cpFile command.
+Error cpFile command. Can't copy directory C:\ usind cpFile command.
+Error rmDir command. Incorrect using of rmDir command.
+Error command choice. Correctly write command.
+Error infoDir command. Incorrect using of infoDir command.
+Error infoDir. Incorrect command and directory split.
+Error crDir command. File C:\new.txt already exists in this path.
+Error command choice. Correctly write command.
+Error crDir command. Incorrect using of crDir command.
+Error crFile command. Incorrect using of crFile command.
+Error cpDir. Incorrect command and directories split.
+Error crDir command. File C already exists in this path.
+Error crDir command. File C already exists in this path.
+Error crDir command. File C already exists in this path.
+Error command choice. Correctly write command.
+Error crDir command. File C already exists in this path.
+Error crDir command. File C already exists in this path.
+Error crDir command. File C already exists in this path.
+Error crFile. User haven't writen file extension.
+Error crFile. User haven't writen file extension.
+Error crFile. User haven't writen file extension.
+Error crFile command. Incorrect using of crFile command.
+Error crFile command. Incorrect using of crFile command.
+Error crFile. Incorrect command and directory split.
+Error crFile. User haven't writen file extension.
+Error crFile. User haven't writen file extension.
+Error crDir command. File C:\.mfdfdfff already exists in this path.
+Error crFile. User haven't writen file extension.
+Error crDir command. File C:\ already exists in this path.
+Error crDir command. File C:\ already exists in this path.
+Error crDir command. File C:\ already exists in this path.
+Error crDir command. File C:\ already exists in this path.
+Error crDir command. Can't create directory C:\ using crFile command.
+Error crFile command. Incorrect using of crFile command.
+Error lsCommand. Incorrect command and directory split.
+Error lsCommand. Incorrect command and directory split.
+Error lsCommand. Directory C:\gfdg doesn't exist.
+Error rmDir. Incorrect command and directory split.
+Error rmDir. Incorrect command and directory split.
+Error rmDir command. Incorrect using of rmDir command.
+Error rmDir command. Incorrect using of rmDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir. Incorrect command and directories split.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir. Incorrect command and directories split.
+Error cpDir. Incorrect command and directories split.
+Error cpDir command. Can't copy directory C:\ into onself.
+Error crDir command. Can't already existing directory C:\.
+Error crFile. Incorrect command and directory split.
+Error crFile. Incorrect command and directory split.
+Error crDir command. Can't create already existing directory C:\New.
+Error rmDir command. Directory doesn't exist.
+Error rmDir command. Incorrect using of rmDir command.
+Error rmDir command. Incorrect using of rmDir command.
+Error rmDir command. Incorrect using of rmDir command.
+Error rmDir. Incorrect command and directory split.
+Error rmDir. Incorrect command and directory split.
+Error rmDir command. Incorrect using of rmDir command.
+Error rmDir command. Incorrect using of rmDir command.
+Error cpDir command. Can't copy directory C:\ into onself.
+Error cpDir command. Source directory C:\Branch1 doesnt't exist.
+Error cpDir. Incorrect command and directories split.
+Error cpDir. Incorrect command and directories split.
+Error cpDir. Incorrect command and directories split.
+Error cpDir command. Destination directory C:\ /p9 doesnt't exist.
+Error cpDir command. Destination directory C:\  /p9 doesnt't exist.
+Error crFile command. File C:\NewFile.md already exists in this path.
+Error rmFile command. File C:\c doesn't exist.
+Error rmFile command. File C:\newFile.md doesn't exist.
+Error rmFile command. Can't delete directory C:\ using rmFile command.
+Error rmFile command. Access to file C:\swapfile.sys denied
+Error rmFile command. Access to file C:\Новая папка111\file.txt denied.
+Error rmFile command. Access to file C:\Новая папка111\file.txt denied.
+Error rmDir command. Incorrect using of rmDir command.
+Error rmDir command. Incorrect using of rmDir command.
+Error rmFile command. Access to file C:\Новая папка111\file.txt denied.
+Error rmFile command. Access to file C:\swapfile.sys denied.
+Error command choice. Correctly write command.
+Error ls command. Incorrect using of ls command.
+Error command choice. Correctly write command.
+Error ls command. Incorrect using of ls command.
+Error command choice. Correctly write command.
+Error command choice. Correctly use command splitter.
+Error command choice. Correctly use command splitter.
+Error command choice. Correctly use command splitter.
+Error command choice. Correctly write command.
+Error info command. Can't get info out of directory C:\ using infoFile command.
+Error infoFile. Incorrect command and file split.
+Error command choice. Correctly write command.
+Error info command. Can't get info out of directory C:\ using infoFile command.
+Error command choice. Correctly use command splitter.
+Error info command. Can't get info out of directory C:\ using infoFile command.
+Error infoDir. Incorrect command and directory split.
+Error infoDir. Incorrect command and directory split.
+Error command choice. Correctly use command splitter.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error command choice. Correctly use command splitter.
+Error command choice. Correctly use command splitter.
+Error command choice. Correctly use command splitter.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error infoDir command. Incorrect using of infoDir command.
+Error infoDir command. Incorrect using of infoDir command.
+Error ls command. Incorrect using of ls command.
+Error ls command. Access to C:\Users\windo\Мои документы denied
+Error ls command. Access to C:\Users\windo\Мои документы denied

@@ -8,64 +8,85 @@ namespace ApplicationForTests
     internal class Programm
     {
 
-        public class Person
-        {
-            public int age { get; set; }
 
-            public int name { get; set; }
-
-            public int surname { get; set; }
-
-            public class student
-            {
-                public int Class { get; set; }
-
-                public int Course { get; set; }
-
-
-
-            }
-        }
 
         static void Main(string[] args)
         {
 
-            Stopwatch sw = new Stopwatch();
-            sw.Restart();
-            cpDirCommand(@"C:\DRIVER\Bluetooth", @"C:\Program Files (x86)\Fallout4New");
-            sw.Stop();
-            Console.WriteLine(sw.ElapsedMilliseconds);
+            string DirectoryPath = directoryExistCheck(Console.ReadLine());
+
+            if (DirectoryPath == string.Empty)
+            {
+                return;
+            }
+
+            Single a = infoDirCommand(DirectoryPath);
+
+            Console.WriteLine($"{a/(1024*1024)} mb");
         }
 
-        static void cpDirCommand(string SourcePath, string DestinationPath)
+        public static string directoryExistCheck(string DirectoryPath)
         {
-            string[] DirAndFiles = Directory.EnumerateFileSystemEntries(SourcePath).ToArray();
+            if (File.Exists(DirectoryPath))
+            {
+                Exception ex = new Exception($"Error infoDir command. Cant't see file {DirectoryPath} info using dirInfo command.");
 
-            for (int i = 0; i < DirAndFiles.Length; i++)
+                Console.WriteLine($"Cant't see file {DirectoryPath} info using dirInfo command.");
+
+                return string.Empty;
+            }
+            else if (!Directory.Exists(DirectoryPath))
+            {
+                Exception ex = new Exception($"Error infoDir command. Directory {DirectoryPath} doesn't exist");
+
+                Console.WriteLine($"Directory {DirectoryPath} doesn't exist");
+
+                return string.Empty;
+            }
+            else 
+            {
+                return DirectoryPath;
+            }
+        }
+        public static long infoDirCommand(string filePath)
+        {
+            string[] DirAndFile = Directory.EnumerateFileSystemEntries(filePath).ToArray();
+
+            long NewFileSize = 0;
+
+            long NewDirectorySize = 0;
+
+            for (int i = 0; i < DirAndFile.Length; i++)
             {
                 try
                 {
-                    string NewfilePathInDir = @$"{DestinationPath}\{Path.GetFileName(DirAndFiles[i])}";
-                    if (File.Exists(NewfilePathInDir))
+                    if (File.Exists(DirAndFile[i]))
                     {
-                        File.Delete(NewfilePathInDir);
+                        FileStream fileStream = new FileStream(DirAndFile[i], FileMode.OpenOrCreate, FileAccess.Read);
+
+                        long FileSize = fileStream.Length;
+
+                        NewFileSize = NewFileSize + FileSize;
                     }
-                    File.Copy(DirAndFiles[i], NewfilePathInDir);
+                    else
+                    {
+                        long DirectorySize = infoDirCommand(DirAndFile[i]);
+
+                        NewDirectorySize = NewDirectorySize + DirectorySize;
+                    }
                 }
                 catch
                 {
-                    DirectoryInfo dirInfo = new DirectoryInfo(DirAndFiles[i]);
-                    string NewDirPathInDir = $@"{DestinationPath}\{dirInfo.Name}".ToString();
-                    if (Directory.Exists(NewDirPathInDir))
-                    {
-                        Directory.Delete(NewDirPathInDir);
-                    }
-                    string NewDirPath = Directory.CreateDirectory(NewDirPathInDir).ToString();
-                    cpDirCommand(DirAndFiles[i], NewDirPath);
+                    Console.WriteLine($"Acceses to file {DirAndFile[i]} is denied. Continue without it");
                 }
 
             }
+            return (NewFileSize + NewDirectorySize);
+
+
         }
+
+
 
     }
 }
