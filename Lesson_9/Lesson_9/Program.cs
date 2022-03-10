@@ -6,7 +6,7 @@ using System.Text.Json;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Lesson_9
+namespace TaskManager
 {
     [Serializable]
     public class Config
@@ -95,7 +95,7 @@ namespace Lesson_9
 
             if (DirectoryPath != string.Empty)
             {
-                lsCommand(DirectoryPath, config.pageSize, 0);
+                ls(DirectoryPath, config.pageSize, 0);
             }
 
             Menu(config.pageSize, DirectoryPath);
@@ -171,14 +171,19 @@ namespace Lesson_9
                     case "ls":
                         try
                         {
-                            if (FirstUserCommand.Length == 1)
+                            if (FirstUserCommand.Length == 2)
                             {
-                                DirectoryPath = lsCommand(DirectoryPath, PageSize, PageSplit);
+                                DirectoryPath = ls(DirectoryPath, PageSize, PageSplit);
 
-                                break;
+                            }else
+                            {
+                                Exception ex = new Exception("Error ls command. Incorrect using of ls command.");
+
+                                ExceptionsWriter(ex);
+
+                                Console.WriteLine("Incorrect using of ls command.");
                             }
 
-                            DirectoryPath = lsCommand(FirstUserCommand[1], PageSize, PageSplit);
                         }
                         catch
                         {
@@ -193,7 +198,18 @@ namespace Lesson_9
                     case "cpFile":
                         try
                         {
-                            cpFileCommand(FirstUserCommand[1].ToString(), FirstUserCommand[2].ToString());
+                            if (FirstUserCommand.Length == 3)
+                            {
+                                cpFile(FirstUserCommand[1].ToString(), FirstUserCommand[2].ToString());
+                            }else
+                            {
+                                Exception ex = new Exception("Error cpFile command. Incorrect using of cpFile command.");
+
+                                ExceptionsWriter(ex);
+
+                                Console.WriteLine("Incorrect using of cpFile command.");
+                            }
+
                         }
                         catch
                         {
@@ -209,14 +225,18 @@ namespace Lesson_9
 
                         try
                         {
-                            (FirstUserCommand[1], FirstUserCommand[2]) = additionTocpDirCommand(FirstUserCommand[1].ToString(), FirstUserCommand[2].ToString());
 
-                            if (FirstUserCommand[1] == string.Empty || FirstUserCommand[2] == string.Empty)
+                            if (FirstUserCommand.Length == 3)
                             {
-                                break;
-                            }
+                                cpDir(FirstUserCommand[1].ToString(), FirstUserCommand[2].ToString());
+                            }else
+                            {
+                                Exception ex = new Exception("Error cpDir command. Incorrect using of cpDir command.");
 
-                            cpDirCommand(FirstUserCommand[1].ToString(), FirstUserCommand[2].ToString());
+                                ExceptionsWriter(ex);
+
+                                Console.WriteLine("Incorrect using of cpDir command.");
+                            }
 
 
                         }
@@ -228,44 +248,55 @@ namespace Lesson_9
 
                             Console.WriteLine("Incorrect using of cpDir command.");
 
-                            break;
                         }
-                        Console.WriteLine("Directory succsesfully coppied.");
+                        
                         break;
                     case "rmDir":
+
                         try
                         {
-                            string check = additionTormDirCommand(FirstUserCommand[1].ToString());
+                            if (FirstUserCommand.Length == 2)
+                            {
+                                rmDir(FirstUserCommand[1].ToString());
+                            }else
+                            {
+                                Exception ex = new Exception("Error rmDirCommand. Incorrect using of rmDir command");
 
-                            if (check == string.Empty)
-                            {
-                                break;
-                            }
-                            else
-                            {
-                                rmDirCommand(FirstUserCommand[1].ToString());
+                                ExceptionsWriter(ex);
+
+                                Console.WriteLine("Incorrect using of rmDir command.");
                             }
 
                         }
                         catch
                         {
-                            Exception ex = new Exception("Error rmDir command. Incorrect using of rmDir command.");
+                            Exception ex = new Exception("Error rmDirCommand. Incorrect using of rmDir command");
 
                             ExceptionsWriter(ex);
 
                             Console.WriteLine("Incorrect using of rmDir command.");
 
-                            break;
                         }
-                        Console.WriteLine("Directory succesfully deleted.");
+                        
                         break;
                     case "rmFile":
                         try
                         {
-                            rmFileCommand(FirstUserCommand[1].ToString());
+                            if (FirstUserCommand.Length == 2)
+                            {
+                                rmFile(FirstUserCommand[1].ToString());
+                            }else
+                            {
+                                Exception ex = new Exception("Error rmFile command. Incorrect using of infoFile command.");
+
+                                ExceptionsWriter(ex);
+
+                                Console.WriteLine("Incorrect using of infoFile command.");
+                            }
+
 
                         }
-                        catch (IndexOutOfRangeException)
+                        catch 
                         {
                             Exception ex = new Exception("Error rmFile command. Incorrect using of infoFile command.");
 
@@ -291,51 +322,43 @@ infoDir - get file size and attributes. Write next to this command directory pat
                     case "infoFile":
                         try
                         {
-                            infoFileCommand(FirstUserCommand[1]);
+                            if (FirstUserCommand.Length == 2)
+                            {
+                                infoFile(FirstUserCommand[1]);
+                            }else
+                            {
+                                Exception ex = new Exception("Error infoFile command. Incorrect using of infoFile command.");
+
+                                ExceptionsWriter(ex);
+
+                                Console.WriteLine("Incorrect using of infoFile command.");
+                            }
+
                         }
                         catch
                         {
                             Exception ex = new Exception("Error infoFile command. Incorrect using of infoFile command.");
 
                             ExceptionsWriter(ex);
+
                             Console.WriteLine("Incorrect using of infoFile command.");
                         }
                         break;
                     case "infoDir":
                         try
                         {
-                            string InfoDirectory = additionTodirInfoCommand(FirstUserCommand[1]);
-                            if (InfoDirectory == string.Empty)
+                            if (FirstUserCommand.Length == 2)
                             {
-                                break;
-                            }
-                            Console.WriteLine(@"Type any button to calculate size and see attributes. 
-Type 0 if you changed your mind and want to exit from infoDir command.");
-                            string UserChoice = Console.ReadLine();
-                            Console.WriteLine("Calculating directory size. It may take sometime.");
-
-                            if (UserChoice == "0")
+                                infoDir(FirstUserCommand[1]);
+                            }else
                             {
-                                break;
+                                Exception ex = new Exception("Error infoDir command. Incorrect using of infoDir command.");
 
+                                ExceptionsWriter(ex);
+
+                                Console.WriteLine("Incorrect using of infoDir command.");
                             }
 
-                            Stopwatch sw = new Stopwatch();
-
-                            sw.Restart();
-
-                            Single DirSize = infoDirCommand(InfoDirectory);
-
-                            sw.Stop();
-
-                            DirectoryInfo directoryInfo = new DirectoryInfo(InfoDirectory);
-
-                            Console.WriteLine();
-
-                            Console.WriteLine(@$"Path {InfoDirectory}
-{directoryInfo.Name} size: {DirSize / 1000} KB. 
-{directoryInfo.Name} attributes: {directoryInfo.Attributes}. 
-Time elapsed {sw.Elapsed} ms.");
                         }
                         catch
                         {
@@ -349,7 +372,18 @@ Time elapsed {sw.Elapsed} ms.");
                     case "crDir":
                         try
                         {
-                            crDir(FirstUserCommand[1]);
+                            if (FirstUserCommand.Length == 2)
+                            {
+                                crDir(FirstUserCommand[1]);
+                            }else
+                            {
+                                Exception ex = new Exception("Error crDir command. Incorrect using of crDir command.");
+
+                                ExceptionsWriter(ex);
+
+                                Console.WriteLine("Incorrect using of crDir command.");
+                            }
+
                         }
                         catch
                         {
@@ -363,7 +397,19 @@ Time elapsed {sw.Elapsed} ms.");
                     case "crFile":
                         try
                         {
-                            crFileCommand(FirstUserCommand[1]);
+                            if (FirstUserCommand.Length == 2)
+                            {
+                                crFile(FirstUserCommand[1]);
+                            }else
+                            {
+                                Exception ex = new Exception("Error crFile command. Incorrect using of crFile command.");
+
+                                ExceptionsWriter(ex);
+
+                                Console.WriteLine("Incorrect using of crFile command.");
+                            }
+
+
                         }
                         catch
                         {
@@ -418,7 +464,7 @@ Time elapsed {sw.Elapsed} ms.");
 
 
         }
-        public static string lsCommand(string DirectoryPath, int PageSize, int PageNum)
+        public static string ls(string DirectoryPath, int PageSize, int PageNum)
         {
             if (DirectoryPath[0] == ':' || DirectoryPath[DirectoryPath.Length - 1] == ' ')
             {
@@ -434,27 +480,42 @@ Time elapsed {sw.Elapsed} ms.");
             }
             if (Directory.Exists(DirectoryPath))
             {
-                string[] PathInArray = Directory.EnumerateFileSystemEntries(DirectoryPath).ToArray();
-
-                if (PathInArray.Length == 0)
+                try
                 {
-                    Console.WriteLine($"Directory {DirectoryPath} is empty.");
-                }
+                    string[] PathInArray = Directory.EnumerateFileSystemEntries(DirectoryPath).ToArray();
 
-                for (int i = PageNum * PageSize; i < (PageNum * PageSize) + PageSize; i++)
+                    if (PathInArray.Length == 0)
+                    {
+                        Console.WriteLine($"Directory {DirectoryPath} is empty.");
+                    }
+
+                    for (int i = PageNum * PageSize; i < (PageNum * PageSize) + PageSize; i++)
+                    {
+                        try
+                        {
+                            Console.WriteLine(PathInArray[i]);
+                        }
+                        catch (IndexOutOfRangeException)
+                        {
+
+                            return DirectoryPath;
+
+                        }
+                    }
+                    return DirectoryPath;
+                }
+                catch
                 {
-                    try
-                    {
-                        Console.WriteLine(PathInArray[i]);
-                    }
-                    catch (IndexOutOfRangeException)
-                    {
+                    Exception ex = new Exception($"Error ls command. Access to {DirectoryPath} denied");
 
-                        return DirectoryPath;
+                    ExceptionsWriter(ex);
 
-                    }
+                    Console.WriteLine($"Access to {DirectoryPath} denied");
+
+                    string DirPath = File.ReadAllText(@"C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\Path.json.");
+
+                    return DirPath;
                 }
-                return DirectoryPath;
             }
             else if (File.Exists(DirectoryPath))
             {
@@ -485,7 +546,7 @@ Time elapsed {sw.Elapsed} ms.");
 
 
         }
-        public static void cpFileCommand(string SourceFile, string DestinationFile)
+        public static void cpFile(string SourceFile, string DestinationFile)
         {
             if (SourceFile[0] == ':' || DestinationFile[0] == ':' || SourceFile[SourceFile.Length - 1] == ' ' || DestinationFile[DestinationFile.Length - 1] == ' ')
             {
@@ -527,7 +588,6 @@ Time elapsed {sw.Elapsed} ms.");
                 return;
             }
 
-
             if (!File.Exists(SourceFile))
             {
                 {
@@ -551,8 +611,32 @@ Time elapsed {sw.Elapsed} ms.");
             }
 
         }
+        public static void cpDir(string SourcePath, string DestinationPath)
+        {
+            try
+            {
+                (SourcePath, DestinationPath) = DirectoryCheckerAdditionTocpDirCommand(SourcePath, DestinationPath);
 
-        public static (string SourcePath, string DestinationPath) additionTocpDirCommand(string SourcePath, string DestinationPath)
+                if (SourcePath == string.Empty || DestinationPath == string.Empty)
+                {
+                    return;
+                }
+                CopyingcpDirCommand(SourcePath, DestinationPath);
+
+                Console.WriteLine($"Source directory {SourcePath} succesfully copied to {DestinationPath}");
+            }
+            catch
+            {
+                Exception ex = new Exception("Error cpDir command. Incorrect using of cpDir command.");
+
+                ExceptionsWriter(ex);
+
+                Console.WriteLine("Incorrect using of cpDir command.");
+
+                return;
+            }
+        }
+        public static (string SourcePath, string DestinationPath) DirectoryCheckerAdditionTocpDirCommand(string SourcePath, string DestinationPath)
         {
             if (SourcePath[0] == ':' || DestinationPath[0] == ':' || SourcePath[SourcePath.Length - 1] == ' ' || DestinationPath[DestinationPath.Length - 1] == ' ')
             {
@@ -624,8 +708,9 @@ Time elapsed {sw.Elapsed} ms.");
 
         }
 
-        public static void cpDirCommand(string SourcePath, string DestinationPath)
+        public static void CopyingcpDirCommand(string SourcePath, string DestinationPath)
         {
+            
 
             string[] DirAndFiles = Directory.EnumerateFileSystemEntries(SourcePath).ToArray();
 
@@ -646,61 +731,87 @@ Time elapsed {sw.Elapsed} ms.");
                     string NewDirPathInDir = $@"{DestinationPath}\{dirInfo.Name}".ToString();
                     if (Directory.Exists(NewDirPathInDir))
                     {
-                        rmDirCommand(NewDirPathInDir);
+                        DeletingrmDirCommand(NewDirPathInDir);
                     }
                     string NewDirPath = Directory.CreateDirectory(NewDirPathInDir).ToString();
-                    cpDirCommand(DirAndFiles[i], NewDirPath);
+                    CopyingcpDirCommand(DirAndFiles[i], NewDirPath);
                 }
 
 
             }
         }
 
-        public static string additionTormDirCommand(string DirectoryPath)
+        public static void rmDir(string DirectoryPath)
         {
-            if (DirectoryPath[0] == ':' || DirectoryPath[DirectoryPath.Length - 1] == ' ')
+
+            try
             {
-                Exception ex = new Exception("Error rmDir. Incorrect command and directory split.");
+                DirectoryPath = (DirectoryCheckerAdditiontormDirCommand(DirectoryPath));
+
+                if (DirectoryPath == string.Empty)
+                {
+                    return;
+                }
+
+                DeletingrmDirCommand(DirectoryPath);
+
+                Console.WriteLine($"Directory {DirectoryPath} succesfully deleted.");
+            }  catch
+            {
+                Exception ex = new Exception("Error rmDir command. Incorrect using of rmDir command.");
 
                 ExceptionsWriter(ex);
 
-                Console.WriteLine("Correctly split command and directory.");
+                Console.WriteLine("Incorrect using of rmDir command.");
 
-                return string.Empty;
+                return;
             }
+        }
+        public static string DirectoryCheckerAdditiontormDirCommand(string DirectoryPath)
+        {
+            
+                if (DirectoryPath[0] == ':' || DirectoryPath[DirectoryPath.Length - 1] == ' ')
+                {
+                    Exception ex = new Exception("Error rmDir. Incorrect command and directory split.");
 
-            if (!Directory.Exists(DirectoryPath))
-            {
-                Exception ex = new Exception("Error rmDir command. Directory doesn't exist.");
+                    ExceptionsWriter(ex);
 
-                ExceptionsWriter(ex);
+                    Console.WriteLine("Correctly split command and directory.");
 
-                Console.WriteLine("Directory doesn't exist.");
+                    return string.Empty;
+                }
+                if (File.Exists(DirectoryPath))
+                {
+                    Exception ex = new Exception("Error rmDir command. Can't delete file using rmDir command.");
 
-                return string.Empty;
-            }
+                    ExceptionsWriter(ex);
 
-            if (File.Exists(DirectoryPath))
-            {
-                Exception ex = new Exception("Error rmDir command. Can't delete file using rmDir command.");
+                    Console.WriteLine("Can't delete file using rmDir command.");
 
-                ExceptionsWriter(ex);
+                    return string.Empty;
+                }
+                if (!Directory.Exists(DirectoryPath))
+                {
+                    Exception ex = new Exception("Error rmDir command. Directory doesn't exist.");
 
-                Console.WriteLine("Can't delete file using rmDir command.");
+                    ExceptionsWriter(ex);
 
-                return string.Empty;
-            }
-            else
-            {
-                return "Exist";
-            }
+                    Console.WriteLine("Directory doesn't exist.");
 
+                    return string.Empty;
+                }
 
-
+                else
+                {
+                    return DirectoryPath;
+                }
+            
+            
         }
 
-        public static void rmDirCommand(string DirectoryPath)
+        public static void DeletingrmDirCommand(string DirectoryPath)
         {
+
 
             string[] allderictories = Directory.EnumerateFileSystemEntries(DirectoryPath).ToArray();
 
@@ -735,12 +846,12 @@ Time elapsed {sw.Elapsed} ms.");
                     }
                     catch
                     {
-                        rmDirCommand(allderictories[i]);
+                        DeletingrmDirCommand(allderictories[i]);
                     }
                 }
             }
         }
-        public static void rmFileCommand(string FilePath)
+        public static void rmFile(string FilePath)
         {
             try
             {
@@ -797,7 +908,7 @@ Time elapsed {sw.Elapsed} ms.");
 
         }
 
-        public static void infoFileCommand(string filePath)
+        public static void infoFile(string filePath)
         {
             if (filePath[0] == ':' || filePath[filePath.Length - 1] == ' ')
             {
@@ -811,19 +922,17 @@ Time elapsed {sw.Elapsed} ms.");
             }
             if (Directory.Exists(filePath))
             {
-                Exception ex = new Exception($"Error info command. Can't get info out of directory {filePath} using infoFile command.");
+                Exception ex = new Exception($"Error info command. Can't see directory {filePath} info using infoFile command.");
 
                 ExceptionsWriter(ex);
 
-                Console.WriteLine($"Can't get info out of directory {filePath} using infoFile command.");
+                Console.WriteLine($"Can't see directory {filePath} info using infoFile command.");
 
                 return;
             }
 
             if (File.Exists(filePath))
             {
-                string Attributes = File.GetAttributes(filePath).ToString();
-
                 FileInfo file = new FileInfo(filePath);
 
                 double a = Convert.ToDouble(file.Length);
@@ -847,7 +956,47 @@ Time elapsed {sw.Elapsed} ms.");
 
 
         }
-        public static string additionTodirInfoCommand(string DirectoryPath)
+
+        public static void infoDir(string InfoDirectory)
+        {
+            InfoDirectory = DirectoryCheckerAdditioninfoDirCommand(InfoDirectory);
+
+            if (InfoDirectory == string.Empty)
+            {
+                return;
+            }
+
+            DirectoryInfo directoryInfo = new DirectoryInfo(InfoDirectory);
+
+            Console.WriteLine($@"Type any button to calculate size of {directoryInfo.Name} and see attributes. 
+Type 0 if you changed your mind and want to exit from infoDir command. Calculating may take sometime.");
+            string UserChoice = Console.ReadLine();
+            Console.WriteLine("Calculating directory size.");
+
+            if (UserChoice == "0")
+            {
+                return;
+
+            }
+
+            Stopwatch sw = new Stopwatch();
+
+            sw.Restart();
+
+            Single DirSize = CalculationinfoDirCommand(InfoDirectory);
+
+            sw.Stop();
+
+            Console.WriteLine();
+
+            Console.WriteLine(@$"Path {InfoDirectory}
+{directoryInfo.Name} size: {DirSize / 1000} KB. 
+{directoryInfo.Name} attributes: {directoryInfo.Attributes}. 
+Time elapsed {sw.ElapsedMilliseconds} ms.");
+
+        }
+
+        public static string DirectoryCheckerAdditioninfoDirCommand(string DirectoryPath)
         {
             if (DirectoryPath[0] == ':' || DirectoryPath[DirectoryPath.Length - 1] == ' ')
             {
@@ -868,7 +1017,7 @@ Time elapsed {sw.Elapsed} ms.");
 
                 return string.Empty;
             }
-            else if (!Directory.Exists(DirectoryPath))
+            if (!Directory.Exists(DirectoryPath))
             {
                 Exception ex = new Exception($"Error infoDir command. Directory {DirectoryPath} doesn't exist.");
 
@@ -876,14 +1025,17 @@ Time elapsed {sw.Elapsed} ms.");
 
                 return string.Empty;
             }
-            else
+            if(Directory.Exists(DirectoryPath))
             {
                 return DirectoryPath;
+            }else
+            {
+                return string.Empty;
             }
         }
-        public static long infoDirCommand(string filePath)
+        public static long CalculationinfoDirCommand(string DirPath)
         {
-            string[] DirAndFile = Directory.EnumerateFileSystemEntries(filePath).ToArray();
+            string[] DirAndFile = Directory.EnumerateFileSystemEntries(DirPath).ToArray();
 
             long NewFileSize = 0;
 
@@ -903,7 +1055,7 @@ Time elapsed {sw.Elapsed} ms.");
                     }
                     else
                     {
-                        long DirectorySize = infoDirCommand(DirAndFile[i]);
+                        long DirectorySize = CalculationinfoDirCommand(DirAndFile[i]);
 
                         NewDirectorySize = NewDirectorySize + DirectorySize;
                     }
@@ -918,7 +1070,7 @@ Time elapsed {sw.Elapsed} ms.");
 
 
         }
-        static void crFileCommand(string FilePath)
+        static void crFile(string FilePath)
         {
 
             if (FilePath[0] == ':' || FilePath[FilePath.Length - 1] == ' ')
@@ -933,11 +1085,11 @@ Time elapsed {sw.Elapsed} ms.");
             }
             if (Directory.Exists(FilePath))
             {
-                Exception ex = new Exception($"Error crFile command. Can't create unnamed file {FilePath}.");
+                Exception ex = new Exception($"Error crFile command. Directory {FilePath} already exists.");
 
                 ExceptionsWriter(ex);
 
-                Console.WriteLine($"Can't create unnamed file {FilePath}.");
+                Console.WriteLine($"Directory {FilePath} already exists. Change file name.");
 
                 return;
             }

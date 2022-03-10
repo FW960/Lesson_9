@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\windo\\source\\repos\\Lesson_9\\Lesson_9\\Lesson_9\\Lesson_9.csproj",
-      "projectName": "Lesson_9",
-      "projectPath": "C:\\Users\\windo\\source\\repos\\Lesson_9\\Lesson_9\\Lesson_9\\Lesson_9.csproj",
+      "projectUniqueName": "C:\\Users\\windo\\source\\repos\\Lesson_9\\Lesson_9\\Lesson_9\\TaskManager.csproj",
+      "projectName": "TaskManager",
+      "projectPath": "C:\\Users\\windo\\source\\repos\\Lesson_9\\Lesson_9\\Lesson_9\\TaskManager.csproj",
       "packagesPath": "C:\\Users\\windo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\windo\\source\\repos\\Lesson_9\\Lesson_9\\Lesson_9\\obj\\",
       "projectStyle": "PackageReference",

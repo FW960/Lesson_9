@@ -125,3 +125,89 @@ Error infoDir command. Incorrect using of infoDir command.
 Error ls command. Incorrect using of ls command.
 Error ls command. Access to C:\Users\windo\Мои документы denied
 Error ls command. Access to C:\Users\windo\Мои документы denied
+Error command choice. Correctly write command.
+Error cpDir command. Can't copy directory C:\ into onself.
+Error command choice. Correctly write command.
+Error cpFile command. Can't copy directory C:\ usind cpFile command.
+Error cpFile command. Incorrect using of cpFile command.
+Error cpFile command. Incorrect using of cpFile command.
+Error crFile command. Incorrect using of crFile command.
+Error rmDir. Incorrect command and directory split.
+Error rmDir command. Directory doesn't exist.
+Error rmDir command. Directory doesn't exist.
+Error rmDirCommand. Incorrect using of rmDir command
+Error rmDirCommand. Incorrect using of rmDir command
+Error rmDir command. Incorrect using of rmDir command.
+Error rmDir command. Directory doesn't exist.
+Error rmDir command. Directory doesn't exist.
+Error rmDir command. Directory doesn't exist.
+Error command choice. Correctly use command splitter.
+Error rmDir command. Can't delete file using rmDir command.
+Error cpDir command. Can't copy directory C:\ into onself.
+Error cpDir command. Can't copy directory C:\ into onself.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir. Incorrect command and directories split.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error cpDir command. Incorrect using of cpDir command.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error infoDir. Incorrect command and directory split.
+Error rmDir command. Incorrect using of rmDir command.
+Error rmDir command. Incorrect using of rmDir command.
+Error rmDir command. Incorrect using of rmDir command.
+Error rmDir command. Incorrect using of rmDir command.
+Error rmDir command. Directory doesn't exist.
+Error rmDir command. Incorrect using of rmDir command.
+Error lsCommand. Directory C:\Users\gddg doesn't exist.
+Error info command. Can't get info out of directory C:\Users\windo\source\repos\Lesson_9 using infoFile command.
+Error info command. Can't see directory C:\Users\windo\source\repos\Lesson_9 info using infoFile command.
+Error info command. Can't see directory C:\Users\windo\source\repos\Lesson_9\ info using infoFile command.
+Error info command. Can't see directory C:\Users\windo\source\repos\Lesson_9 info using infoFile command.
+Error info command. Can't find path C:\Users\windo\source\repos\Lesson_.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error command choice. Correctly write command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Incorrect using of cpDir command.
+Error cpDir command. Destination directory C:\Новая папка111 doesnt't exist.
+Error cpDir command. Incorrect using of cpDir command.
+Error ls command. Incorrect using of ls command.
+Error rmFile command. Incorrect using of infoFile command.
+Error crFile command. Incorrect using of crFile command.
+Error crFile command. Incorrect using of crFile command.
+Error crFile command. Incorrect using of crFile command.
+Error crFile command. Can't create unnamed file C:\.
+Error crFile command. Can't create unnamed file.
+Error crFile command. Incorrect using of crFile command.
+Error crFile command. Directory C:\ already exists.
+Error crFile command. Incorrect using of crFile command.
+Error crFile command. Incorrect using of crFile command.
+Error crFile command. File C:\C already exists in this path.
+Error crFile command. Directory C:\Новая Папка111\default already exists.
+Error crFile command. Directory C:\Новая папка111\Default already exists.
+Error crFile command. Directory C:\Новая папка111\Default\ already exists.
