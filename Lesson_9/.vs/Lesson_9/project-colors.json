@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "77d0dc72-59f4-41f6-bb5c-217dd70f3e01": {
+      "ProjectGuid": "77d0dc72-59f4-41f6-bb5c-217dd70f3e01",
+      "DisplayName": "PersonsData",
+      "ColorIndex": 0
+    },
+    "d47e3ce4-768d-4a6b-a525-4abca74453b9": {
+      "ProjectGuid": "d47e3ce4-768d-4a6b-a525-4abca74453b9",
+      "DisplayName": "Lesson_9",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    },
+    "c501ce71-cd77-4f68-b769-182bd5dd3d80": {
+      "ProjectGuid": "c501ce71-cd77-4f68-b769-182bd5dd3d80",
+      "DisplayName": "DirectoryManagment",
+      "ColorIndex": 2
+    },
+    "ef77a64a-c368-4ccc-b23f-7c285b5da25f": {
+      "ProjectGuid": "ef77a64a-c368-4ccc-b23f-7c285b5da25f",
+      "DisplayName": "ApplicationForTests",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}

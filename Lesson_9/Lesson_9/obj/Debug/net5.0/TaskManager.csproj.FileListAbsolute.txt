@@ -1,0 +1,16 @@
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\TaskManager.exe
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\TaskManager.dll.config
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\TaskManager.deps.json
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\TaskManager.runtimeconfig.json
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\TaskManager.runtimeconfig.dev.json
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\TaskManager.dll
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\ref\TaskManager.dll
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\bin\Debug\net5.0\TaskManager.pdb
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\TaskManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\TaskManager.AssemblyInfoInputs.cache
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\TaskManager.AssemblyInfo.cs
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\TaskManager.csproj.CoreCompileInputs.cache
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\TaskManager.dll
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\ref\TaskManager.dll
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\TaskManager.pdb
+C:\Users\windo\source\repos\Lesson_9\Lesson_9\Lesson_9\obj\Debug\net5.0\TaskManager.genruntimeconfig.cache
